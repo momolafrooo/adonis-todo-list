@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light mb-5">
+  <div class="container">
+    <a class="navbar-brand">Todo List</a>
+    @if(auth.isLoggedIn)
+      <form class="w-50">
+        <input class="form-control me-2 w-100" type="search" name="search" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <form action="{{ route('logout') }}" method="post">
+        <button class="btn btn-outline-secondary" type="submit">Deconnexion</button>
+      </form>
+    @endif
+  </div>
+</nav>
